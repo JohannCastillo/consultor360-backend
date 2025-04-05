@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z^0mfzjnv11#ji6j3zyy)xm)6r$q0hogkptt)_=b169_67(u!0'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("ENVIRONMENT", "development").lower() == "development"
@@ -42,12 +42,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
      # REST 
     'rest_framework',
+    "rest_framework.authtoken",
+    "corsheaders",
     'drf_spectacular',
      # APPS
     'consultor.apps.ConsultorConfig',
 ]
 
 REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
@@ -137,4 +143,11 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API Consutlor 360 para la gestión de tutorías.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    "SECURITY": [
+        {"TokenAuth": []},
+    ],
+    "SWAGGER_UI_SETTINGS": {
+        "persistAuthorization": True 
+    },
 }

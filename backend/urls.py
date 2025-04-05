@@ -22,10 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include([
         path('v1/', include([
+            path('auth/', include('auth.urls')),
             path('consultor/', include('consultor.urls')),
         ]))
     ])),
-    # Esquema OpenAPI
+    # Docs
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('docs/swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
