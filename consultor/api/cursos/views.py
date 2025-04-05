@@ -3,8 +3,7 @@ from rest_framework import viewsets
 from .models import Curso
 from .serializers import CursoSerializer
 # Documentation
-from drf_spectacular.utils import extend_schema, OpenApiParameter
-from drf_spectacular.types import OpenApiTypes
+from .docs import *
 
 
 @extend_schema(tags=["cursos"])
@@ -12,30 +11,7 @@ class CursoViewSet(viewsets.ModelViewSet):
     queryset = Curso.objects.all()
     serializer_class = CursoSerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name='estado',
-                description='Filtra los cursos por estado activo.',
-                required=False,
-                enum=["activo", "inactivo", "activo,inactivo"],
-                type=OpenApiTypes.STR,
-            ),
-            OpenApiParameter(
-                name='nombre',
-                description='Filtra los cursos por nombre.',
-                required=False,
-                type=OpenApiTypes.STR,
-            ),
-            OpenApiParameter(
-                name='descripcion',
-                description='Filtra los cursos por descripción.',
-                required=False,
-                type=OpenApiTypes.STR,
-            ),
-        ],
-        description="Obtiene una lista de cursos. Puedes filtrar por el parámetro 'activo'."
-    )
+    @curso_list_schema
     def list(self, request):
         return super().list(request)
 
