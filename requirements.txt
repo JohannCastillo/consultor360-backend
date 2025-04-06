@@ -1,15 +1,22 @@
 asgiref==3.8.1
 attrs==25.3.0
+click==8.1.8
+colorama==0.4.6
 dj-database-url==2.3.0
 Django==5.2
+django-cors-headers==4.7.0
 djangorestframework==3.16.0
 drf-spectacular==0.28.0
+gunicorn==23.0.0
+h11==0.14.0
 inflection==0.5.1
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
+packaging==24.2
 psycopg==3.2.6
 psycopg-binary==3.2.6
 psycopg-pool==3.2.6
+psycopg2-binary==2.9.10
 python-dotenv==1.1.0
 PyYAML==6.0.2
 referencing==0.36.2
@@ -18,3 +25,4 @@ sqlparse==0.5.3
 typing_extensions==4.13.0
 tzdata==2025.2
 uritemplate==4.1.1
+uvicorn==0.34.0
