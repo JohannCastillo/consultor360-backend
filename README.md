@@ -6,6 +6,9 @@
 - [Codificación con IA](#codificación-con-ia)
 - [Notas](#notas)
 
+El servicio se encuentra disponible en [https://consultor360-backend-jc.onrender.com](https://consultor360-backend-jc.onrender.com/docs/swagger/)
+> [!NOTE]
+> Posiblemente el servicio no se encuentre disponible durante un tiempo por inactividad, debe esperar unos segundos hasta que se active el servicio después de la primera carga.
 
 # Instrucciones para instalar y ejecutar el proyecto backend
 
@@ -64,7 +67,8 @@ Se utilizó IA para agilizar partes del desarrollo del proyecto backend. Utiliza
 - Solución de errores
 
 # Notas
-- Para probar las peticiones autenticadas desde Swagger UI, utilizar la opción `authorize` (ver las siguientes imágenes).
+> [!TIP]
+>  Para probar las peticiones autenticadas desde Swagger UI, utilizar la opción `authorize` (ver las siguientes imágenes).
 
 <img src="./docs/assets/swagger-auth.png" alt="Peticiones autenticadas en Swagger UI" width="500">
 
