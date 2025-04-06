@@ -1,5 +1,6 @@
 asgiref==3.8.1
 attrs==25.3.0
+Brotli==1.1.0
 click==8.1.8
 colorama==0.4.6
 dj-database-url==2.3.0
@@ -26,3 +27,4 @@ typing_extensions==4.13.0
 tzdata==2025.2
 uritemplate==4.1.1
 uvicorn==0.34.0
+whitenoise==6.9.0
