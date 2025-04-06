@@ -1,0 +1,8 @@
+**/staticfiles/*
+__pycache__/
+*.pyc
+*.log
+*.pot
+db.sqlite3
+**/migrations/*
+!**/migrations/__init__.py

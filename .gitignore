@@ -17,3 +17,6 @@ media
 # Python Installer logs 
 pip-log.txt 
 pip-delete-this-directory.txt 
+
+# static files
+**/staticfiles/*
