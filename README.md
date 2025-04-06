@@ -73,6 +73,7 @@ Se utilizó IA para agilizar partes del desarrollo del proyecto backend. Utiliza
 En el campo TokenAuth (apiKey) debe ingresar el token que se obtiene en la petición de `login` y [decodificar](https://www.base64decode.org/) el token recibido en base64 .
 
 Ejemplo:
+
 <img src="./docs/assets/token.png" alt="Decodificar el token" width="500">
 
 <img src="./docs/assets/decoder.png" alt="Decodificar el token" width="500">
